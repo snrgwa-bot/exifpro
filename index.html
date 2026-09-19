@@ -42,6 +42,7 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#features">Features</a></li>
+        <li><a href="#screens">Screens</a></li>
         <li><a href="#privacy">Privacy</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="support.html">Support</a></li>
@@ -72,7 +73,7 @@
           <div class="chip c1"><span class="dot" style="background:#ff5b5b;box-shadow:0 0 10px #ff5b5b"></span> GPS location found</div>
           <div class="chip c2"><svg viewBox="0 0 24 24" fill="none" stroke="#59d980" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Metadata removed</div>
           <div class="chip c3"><svg viewBox="0 0 24 24" fill="none" stroke="#4dccff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Safe to share</div>
-          <div class="phone"><div class="screen"><img src="assets/shots/library-light.png" alt="EXIF Pro photo library showing metadata badges on each photo" width="402" height="874" /></div></div>
+          <div class="phone"><div class="screen"><img src="assets/shots/library-dark.png" alt="EXIF Pro photo library showing metadata badges on each photo" width="402" height="874" /></div></div>
         </div>
       </div>
     </section>
@@ -144,6 +145,71 @@
       </div>
     </section>
 
+    <!-- SHOWCASE: detail editor -->
+    <section class="showcase">
+      <div class="container">
+        <div class="reveal">
+          <div class="kicker">The editor</div>
+          <h2>Every field, one clean screen.</h2>
+          <p class="lead" style="font-size:17px;margin-bottom:0">Open a photo and the whole picture is there: an embedded map of where it was taken, capture date, device, and every editable field grouped the way you think about it.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Basic / Advanced / Raw</b> — from the essentials to every raw dictionary key.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Unsaved-changes guard</b> — nothing is written until you tap Save or Share.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Copy metadata</b> from another photo to match a set.</span></li>
+          </ul>
+        </div>
+        <div class="phone-wrap reveal" data-delay="1">
+          <div class="phone"><div class="screen"><img src="assets/shots/detail-dark.png" alt="EXIF Pro metadata editor with map preview and editable fields" width="402" height="874" loading="lazy" /></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: full-screen viewer (video) -->
+    <section class="showcase flip">
+      <div class="container">
+        <div class="reveal">
+          <div class="kicker">Full-screen viewer</div>
+          <h2>Swipe through, pull up for details.</h2>
+          <p class="lead" style="font-size:17px;margin-bottom:0">Flick between photos at full resolution. Swipe up and the complete metadata sheet slides over the picture, with Strip All one tap away.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Smooth paging</b> with a blurred backdrop that follows each photo.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Swipe down</b> to dismiss, <b>swipe up</b> for the full metadata sheet.</span></li>
+          </ul>
+        </div>
+        <div class="phone-wrap reveal" data-delay="1">
+          <div class="phone"><div class="screen">
+            <video autoplay muted loop playsinline poster="assets/swipe-poster.jpg" aria-label="Swiping between photos in EXIF Pro's full-screen viewer">
+              <source src="assets/swipe.mp4" type="video/mp4" />
+            </video>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENS -->
+    <section id="screens">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="kicker">Screens</div>
+          <h2>Designed for iOS. Beautiful in both modes.</h2>
+          <p>Native materials, Dynamic Type, VoiceOver, Reduce Motion — and a proper dark mode.</p>
+        </div>
+        <div style="text-align:center">
+          <div class="toggle" role="group" aria-label="Appearance">
+            <button type="button" data-theme-pick="dark" aria-pressed="true">Dark</button>
+            <button type="button" data-theme-pick="light" aria-pressed="false">Light</button>
+          </div>
+        </div>
+        <div class="gallery" id="gallery">
+          <figure><div class="shot"><img data-shot="library" src="assets/shots/library-dark.png" alt="Library grid with metadata badges" loading="lazy" width="402" height="874" /></div><figcaption>Library with metadata badges</figcaption></figure>
+          <figure><div class="shot"><img data-shot="detail" src="assets/shots/detail-dark.png" alt="Metadata editor" loading="lazy" width="402" height="874" /></div><figcaption>Metadata editor</figcaption></figure>
+          <figure><div class="shot"><img data-shot="fullscreen" src="assets/shots/fullscreen-dark.png" alt="Full-screen viewer" loading="lazy" width="402" height="874" /></div><figcaption>Full-screen viewer</figcaption></figure>
+          <figure><div class="shot"><img data-shot="privacy" src="assets/shots/privacy-dark.png" alt="Privacy dashboard" loading="lazy" width="402" height="874" /></div><figcaption>Privacy dashboard</figcaption></figure>
+          <figure><div class="shot"><img data-shot="learn" src="assets/shots/learn-dark.png" alt="Learn tab" loading="lazy" width="402" height="874" /></div><figcaption>Learn what metadata reveals</figcaption></figure>
+          <figure><div class="shot"><img data-shot="settings" src="assets/shots/settings-dark.png" alt="Settings" loading="lazy" width="402" height="874" /></div><figcaption>Settings &amp; templates</figcaption></figure>
+        </div>
+      </div>
+    </section>
 
     <!-- PRIVACY -->
     <section id="privacy">
@@ -247,6 +313,19 @@
       });
     });
 
+    // Light / Dark gallery toggle
+    document.querySelectorAll('[data-theme-pick]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.dataset.themePick;
+        document.querySelectorAll('[data-theme-pick]').forEach(b => b.setAttribute('aria-pressed', b === btn));
+        document.querySelectorAll('#gallery img[data-shot]').forEach(img => {
+          img.style.opacity = 0;
+          const next = new Image();
+          next.onload = () => { img.src = next.src; img.style.opacity = 1; };
+          next.src = 'assets/shots/' + img.dataset.shot + '-' + theme + '.png';
+        });
+      });
+    });
   </script>
 </body>
 </html>
