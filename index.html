@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EXIF Pro — Photo Metadata Editor &amp; Privacy Cleaner for iPhone</title>
-  <meta name="description" content="EXIF Pro lets you see, edit, and strip photo metadata on iPhone. Remove GPS location, camera details, dates and author info before you share. Bulk clean, secure wipe, and a privacy dashboard — all on your device." />
+  <title>EXIF Pro: Photo Metadata Editor and Privacy Cleaner for iPhone</title>
+  <meta name="description" content="EXIF Pro shows the location, time, camera, lens and author hidden in your photos and lets you edit or remove them before you share. Bulk clean, secure wipe and an exposure dashboard, all on your iPhone." />
   <meta name="keywords" content="EXIF editor, remove EXIF, photo metadata, strip GPS from photos, remove location from photos iPhone, metadata cleaner, EXIF viewer" />
-  <meta property="og:title" content="EXIF Pro — Photo Metadata Editor for iPhone" />
-  <meta property="og:description" content="See, edit, and strip photo metadata before you share. Bulk clean, secure wipe, privacy dashboard. 100% on-device." />
+  <meta property="og:title" content="EXIF Pro: Photo Metadata Editor for iPhone" />
+  <meta property="og:description" content="See, edit and strip photo metadata before you share. Bulk clean, secure wipe, exposure dashboard. Processed on your iPhone." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://snrgwa-bot.github.io/exifpro/" />
   <meta property="og:image" content="https://snrgwa-bot.github.io/exifpro/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0d0f17" />
+  <meta name="theme-color" content="#0b0b0d" />
   <link rel="icon" type="image/png" href="assets/icon-64.png" />
   <link rel="apple-touch-icon" href="assets/icon-180.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/SchibstedGrotesk-Black.woff" as="font" type="font/woff" crossorigin />
+  <link rel="preload" href="assets/shots/photos.webp" as="image" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
   {
@@ -26,20 +25,23 @@
     "name": "EXIF Pro",
     "operatingSystem": "iOS",
     "applicationCategory": "PhotoApplication",
-    "description": "See, edit, and strip photo metadata on iPhone. Remove GPS, camera details, dates and author info before you share.",
+    "description": "See, edit and strip photo metadata on iPhone. Remove GPS, camera details, dates and author info before you share.",
     "offers": [ { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, { "@type": "Offer", "price": "24.99", "priceCurrency": "USD", "name": "EXIF Pro Lifetime" } ],
     "author": { "@type": "Organization", "name": "Essential Dev Team", "url": "https://essentialdevteam.com/" },
     "url": "https://apps.apple.com/app/id6774123180"
   }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"><span class="o1"></span><span class="o2"></span><span class="o3"></span></div>
+  <div class="glow" aria-hidden="true"><span class="g1"></span><span class="g2"></span></div>
 
   <header class="nav">
     <div class="container">
-      <a class="brand" href="index.html"><img src="assets/icon-64.png" alt="" width="32" height="32" /> EXIF Pro</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <a class="brand" href="index.html"><img src="assets/icon-64.png" alt="" width="30" height="30" /> EXIF Pro</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#features">Features</a></li>
         <li><a href="#screens">Screens</a></li>
@@ -52,179 +54,164 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div>
-          <span class="eyebrow">Photo metadata, under your control</span>
-          <h1>Every photo carries a story.<br /><span class="grad">Choose what you share.</span></h1>
-          <p class="lead">EXIF Pro shows exactly what is hidden inside your photos — GPS location, camera, dates, author — and lets you edit or wipe it in seconds. Everything happens on your iPhone.</p>
+          <h1>Every photo carries a story. <span class="dim">Choose what you share.</span></h1>
+          <p class="lead">See the location, time, camera, lens and author hidden in every photo. Edit it or peel it off, right on your iPhone.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://apps.apple.com/app/id6774123180">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.68c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.55.02-2.97.9-3.77 2.28-1.61 2.79-.41 6.92 1.16 9.18.77 1.11 1.68 2.35 2.87 2.31 1.15-.05 1.59-.75 2.98-.75s1.79.75 3.01.72c1.24-.02 2.03-1.13 2.79-2.24.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.46-3.69zM14.1 5.94c.63-.77 1.06-1.84.94-2.9-.91.04-2.01.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.05-.52 2.69-1.28z"/></svg>
               Download on the App Store
             </a>
-            <a class="btn btn-ghost" href="#features">See what it does</a>
+            <a class="btn btn-ghost" href="#features">How it works</a>
           </div>
-          <p class="hero-note">Free to start · No account · No ads · Nothing leaves your phone</p>
         </div>
-
-        <div class="phone-wrap">
-          <div class="chip c1"><span class="dot" style="background:#ff5b5b;box-shadow:0 0 10px #ff5b5b"></span> GPS location found</div>
-          <div class="chip c2"><svg viewBox="0 0 24 24" fill="none" stroke="#59d980" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Metadata removed</div>
-          <div class="chip c3"><svg viewBox="0 0 24 24" fill="none" stroke="#4dccff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Safe to share</div>
-          <div class="phone"><div class="screen"><img src="assets/shots/photos.png" alt="EXIF Pro Photos tab: a photo card with its location, time, camera, lens and author layers" width="402" height="874" /></div></div>
-        </div>
+        <div class="phone"><div class="screen"><img src="assets/shots/photos.webp" alt="EXIF Pro Photos tab: a photo card titled Grand Canyon, AZ with its location, time, camera, lens and author layers" width="804" height="1747" /></div></div>
       </div>
     </section>
 
     <div class="trust container">
       <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 100% on-device processing</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> No accounts, no tracking, no ads</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Originals are never touched without asking</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> iPhone &amp; iPad · One cinematic dark design</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Photos are processed on your iPhone</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> No account and no ads</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Originals stay unless you say otherwise</li>
       </ul>
     </div>
 
-    <!-- FEATURES -->
     <section id="features">
       <div class="container">
-        <div class="section-head center reveal">
-          <div class="kicker">Everything in one place</div>
-          <h2>Inspect. Edit. Strip. Share with confidence.</h2>
-          <p>A metadata toolkit that reads like a native iOS app, not a lab instrument.</p>
+        <div class="section-head reveal">
+          <h2>Five layers in every photo.</h2>
+          <p>Each one tells a stranger something about you. EXIF Pro shows them as layers you can read, edit or peel off.</p>
         </div>
-        <div class="grid">
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
-            <h3>See everything inside a photo</h3>
-            <p>Every photo is shown as five layers — Location, Time, Camera, Lens, Author — plus a Raw view of every EXIF, IPTC, TIFF and GPS field underneath.</p>
+        <div class="layers">
+          <div class="layer l1 wide reveal">
+            <span class="code">L1</span>
+            <h3>Location</h3>
+            <p>The exact spot the photo was taken, down to a few metres. Often your home.</p>
+            <div class="strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
           </div>
-          <div class="card violet reveal" data-delay="1">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
-            <h3>Edit any field</h3>
-            <p>Fix the capture date, set author and copyright, rename, or move a photo to a new location on a real map with search and pin drop.</p>
+          <div class="layer l2 wide reveal" data-delay="1">
+            <span class="code">L2</span>
+            <h3>Time</h3>
+            <p>When it was taken. A few photos are enough to map a routine.</p>
+            <div class="strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
           </div>
-          <div class="card teal reveal" data-delay="2">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></div>
-            <h3>Strip it all — or secure wipe</h3>
-            <p>Remove every identifying field in one tap. Secure Wipe overwrites sensitive values with zeros so they cannot be recovered from the file.</p>
+          <div class="layer l3 reveal">
+            <span class="code">L3</span>
+            <h3>Camera</h3>
+            <p>Make, model and settings, enough to link photos to one device.</p>
+            <div class="strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i class="on"></i><i class="on"></i><i></i></div>
           </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-            <h3>Bulk clean hundreds at once</h3>
-            <p>Select a batch and remove location, shift dates, apply an author or run a full wipe across all of them in a single pass.</p>
+          <div class="layer l4 reveal" data-delay="1">
+            <span class="code">L4</span>
+            <h3>Lens</h3>
+            <p>The exact lens and focal length behind the shot.</p>
+            <div class="strip" aria-hidden="true"><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i></div>
           </div>
-          <div class="card violet reveal" data-delay="1">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-            <h3>Exposure, at a glance</h3>
-            <p>One number tells you how many photos still give away where you were standing. Heat strips show every layer across the library, and one tap removes location from all of them.</p>
-          </div>
-          <div class="card teal reveal" data-delay="2">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <h3>Sensitive-content scan</h3>
-            <p>On-device Vision looks inside the picture for IDs, card numbers, passwords and faces, so you catch what metadata alone would miss.</p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h3M17 4h3v3M20 17v3h-3M7 20H4v-3"/><rect x="8" y="8" width="8" height="8" rx="1.5"/></svg></div>
-            <h3>Presets &amp; templates</h3>
-            <p>One-tap presets for Social, Client delivery, Marketplace listing or Anonymous export. Save your own author and copyright templates.</p>
-          </div>
-          <div class="card violet reveal" data-delay="1">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v12"/><path d="m7 8 5-5 5 5"/></svg></div>
-            <h3>Save a copy or share</h3>
-            <p>Write a cleaned copy back to Photos or export straight to Messages, Mail, AirDrop or any app. You decide what happens to the original.</p>
-          </div>
-          <div class="card teal reveal" data-delay="2">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-            <h3>Learn what metadata reveals</h3>
-            <p>A built-in guide explains which fields expose your home, your routine or your gear — and which preset to pick before you post, sell or send.</p>
+          <div class="layer l5 reveal" data-delay="2">
+            <span class="code">L5</span>
+            <h3>Author</h3>
+            <p>Name and copyright, written in by cameras and editing apps.</p>
+            <div class="strip" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i class="on"></i></div>
           </div>
         </div>
+        <p class="layers-note reveal">Underneath the five layers, a Raw view lists every EXIF, IPTC, TIFF and GPS field in the file.</p>
       </div>
     </section>
 
-    <!-- SHOWCASE: detail editor -->
     <section class="showcase">
       <div class="container">
         <div class="reveal">
-          <div class="kicker">The inspector</div>
           <h2>Peel off any layer. Or strip them all.</h2>
-          <p class="lead" style="font-size:17px;margin-bottom:0">Open a photo and it lifts into a stack: one tinted sheet per layer of metadata it carries. Edit a layer, peel it off, or strip every one and watch the photo settle back down, clean.</p>
+          <p class="lead">Open a photo and it lifts into a stack, one tinted sheet per layer. Edit a layer, peel it off, or strip every one and watch the photo settle back down, clean.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Layers / Raw</b> — the five layers that matter, or every raw dictionary key.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Unsaved-changes guard</b> — nothing is written until you tap Save or Share.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Copy metadata</b> from another photo to match a set.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Edit any field.</b> Fix the date, set author and copyright, or move the photo on a real map.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Nothing is written</b> until you tap Save or Share.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Copy metadata</b> from another photo to match a set.</span></li>
           </ul>
         </div>
-        <div class="phone-wrap reveal" data-delay="1">
-          <div class="phone"><div class="screen"><img src="assets/shots/inspect.png" alt="EXIF Pro inspector showing a photo lifted into five metadata layers" width="402" height="874" loading="lazy" /></div></div>
-        </div>
+        <div class="phone reveal" data-delay="1"><div class="screen"><img src="assets/shots/inspect.webp" alt="EXIF Pro inspector: the photo lifted into five coloured metadata layers, with Peel off buttons" width="804" height="1747" loading="lazy" /></div></div>
       </div>
     </section>
 
-    <!-- SHOWCASE: full-screen viewer (video) -->
     <section class="showcase flip">
       <div class="container">
         <div class="reveal">
-          <div class="kicker">Strip it all</div>
-          <h2>Swipe, inspect, strip. Done.</h2>
-          <p class="lead" style="font-size:17px;margin-bottom:0">Flick between photos and the place, date and layers update under your thumb. Open one, strip every layer, and the stack collapses into a clean copy ready to save or share.</p>
+          <h2>Clean. Nothing left that says where, when or who.</h2>
+          <p class="lead">The stack collapses into a clean copy, ready to save to Photos or send anywhere. You decide what happens to the original.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Headline per photo</b> — the city it was taken in, straight from its GPS.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Strip every layer</b> peels them off one by one, then the photo turns Clean.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Secure Wipe</b> overwrites sensitive values with zeros before removing them.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Share straight out</b> to Messages, Mail, AirDrop or any app.</span></li>
           </ul>
         </div>
-        <div class="phone-wrap reveal" data-delay="1">
-          <div class="phone"><div class="screen">
-            <img src="assets/shots/clean.png" alt="A photo stripped of every layer, marked Clean with a green ring" width="402" height="874" loading="lazy" />
-          </div></div>
+        <div class="phone reveal" data-delay="1"><div class="screen"><img src="assets/shots/clean.webp" alt="A photo stripped of every layer, marked Clean, with a green Save clean copy button" width="804" height="1747" loading="lazy" /></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>For a whole library, too.</h2>
+        </div>
+        <div class="more reveal">
+          <div>
+            <h3>Bulk clean</h3>
+            <p>Select a batch and remove location, author or everything in one pass.</p>
+          </div>
+          <div>
+            <h3>Exposure</h3>
+            <p>One number shows how many photos still give away where you were standing. One tap removes location from all of them.</p>
+          </div>
+          <div>
+            <h3>Sensitive-content scan</h3>
+            <p>On-device Vision looks inside the picture for IDs, card numbers, passwords and faces.</p>
+          </div>
+          <div>
+            <h3>Presets and templates</h3>
+            <p>One tap for Social, Client delivery, Marketplace or Anonymous export. Save your own author and copyright.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SCREENS -->
     <section id="screens">
       <div class="container">
-        <div class="section-head center reveal">
-          <div class="kicker">Screens</div>
-          <h2>Designed for iOS. Dark by design.</h2>
-          <p>Photo-first and cinematic: a black canvas, one colour per layer, Dynamic Type, VoiceOver and Reduce Motion.</p>
+        <div class="section-head reveal">
+          <h2>Dark by design.</h2>
+          <p>A black canvas, one colour per layer, and full support for Dynamic Type, VoiceOver and Reduce Motion.</p>
         </div>
-        <div class="gallery" id="gallery">
-          <figure><div class="shot"><img src="assets/shots/photos.png" alt="Photos tab with a photo card and its metadata layers" loading="lazy" width="402" height="874" /></div><figcaption>Photos, with the layers each one carries</figcaption></figure>
-          <figure><div class="shot"><img src="assets/shots/inspect.png" alt="Inspector with the photo lifted into five layers" loading="lazy" width="402" height="874" /></div><figcaption>Inspect: peel off any layer</figcaption></figure>
-          <figure><div class="shot"><img src="assets/shots/clean.png" alt="A clean photo with a green ring and check" loading="lazy" width="402" height="874" /></div><figcaption>Clean. Save or share</figcaption></figure>
-          <figure><div class="shot"><img src="assets/shots/exposure.png" alt="Exposure tab counting photos that still reveal a location" loading="lazy" width="402" height="874" /></div><figcaption>Exposure across your library</figcaption></figure>
-          <figure><div class="shot"><img src="assets/shots/bulk.png" alt="Grid with three photos selected and bulk actions" loading="lazy" width="402" height="874" /></div><figcaption>Bulk clean in one pass</figcaption></figure>
-          <figure><div class="shot"><img src="assets/shots/learn.png" alt="Learn tab" loading="lazy" width="402" height="874" /></div><figcaption>Learn what metadata reveals</figcaption></figure>
+        <div class="gallery">
+          <figure><div class="shot"><img src="assets/shots/photos.webp" alt="Photos tab with a photo card and its metadata layers" loading="lazy" width="804" height="1747" /></div><figcaption>Every photo, with its layers</figcaption></figure>
+          <figure><div class="shot"><img src="assets/shots/inspect.webp" alt="Inspector with the photo lifted into five layers" loading="lazy" width="804" height="1747" /></div><figcaption>Peel off any layer</figcaption></figure>
+          <figure><div class="shot"><img src="assets/shots/clean.webp" alt="A clean photo with a green check" loading="lazy" width="804" height="1747" /></div><figcaption>Clean, then save or share</figcaption></figure>
+          <figure><div class="shot"><img src="assets/shots/exposure.webp" alt="Exposure tab: 13 of 24 photos still reveal a location, with a strip per layer" loading="lazy" width="804" height="1747" /></div><figcaption>Exposure across your library</figcaption></figure>
+          <figure><div class="shot"><img src="assets/shots/bulk.webp" alt="Photo grid with three photos selected and bulk actions" loading="lazy" width="804" height="1747" /></div><figcaption>Bulk clean in one pass</figcaption></figure>
+          <figure><div class="shot"><img src="assets/shots/learn.webp" alt="Learn tab: what your photos quietly carry" loading="lazy" width="804" height="1747" /></div><figcaption>Learn what metadata reveals</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- PRIVACY -->
     <section id="privacy">
       <div class="container">
         <div class="callout reveal">
-          <div class="kicker">Privacy by design</div>
           <h2>An app about privacy has to be private itself.</h2>
-          <p style="color:var(--muted);margin-top:12px;max-width:640px">EXIF Pro reads and rewrites your photos entirely on your iPhone using Apple's ImageIO and Vision frameworks. There is no account, no advertising and no third-party SDK. Photos never leave the device. The app sends two things over the network: a version check to Apple, and, unless you switch it off in Settings, anonymous usage counts (which screens are used, how many photos were cleaned) tied to a random installation ID — never your name, location, device identifiers or anything from a photo.</p>
-          <div class="grid">
-            <div class="stat"><b>0</b><span>photos uploaded — ever</span></div>
+          <p>EXIF Pro reads and rewrites your photos entirely on your iPhone, using Apple's ImageIO and Vision. There is no account, no advertising and no third-party SDK, and photos never leave the device.</p>
+          <p>The app sends two things over the network: a version check to Apple and, unless you switch it off in Settings, anonymous usage counts tied to a random installation ID. Never your name, location, device identifiers or anything from a photo.</p>
+          <div class="stats">
+            <div class="stat"><b>0</b><span>photos ever uploaded</span></div>
             <div class="stat"><b>0</b><span>trackers, ads or third-party SDKs</span></div>
-            <div class="stat"><b>100%</b><span>processing on your device</span></div>
+            <div class="stat"><b>100%</b><span>of photo processing on your iPhone</span></div>
           </div>
-          <p style="margin-top:22px"><a class="btn btn-ghost" href="privacy.html">Read the privacy policy</a></p>
+          <a class="btn btn-ghost" href="privacy.html">Read the privacy policy</a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq">
       <div class="container">
         <div class="section-head reveal">
-          <div class="kicker">FAQ</div>
           <h2>Good questions.</h2>
         </div>
         <div class="faq reveal">
@@ -252,12 +239,11 @@
       </div>
     </section>
 
-    <!-- DOWNLOAD -->
     <section class="download" id="download">
       <div class="container reveal">
         <img class="icon-big" src="assets/icon-192.png" alt="EXIF Pro app icon" width="96" height="96" loading="lazy" />
         <h2>Know what your photos say.</h2>
-        <p>Free to start on iPhone and iPad: see everything and clean up to 5 photos a day. EXIF Pro unlocks unlimited cleaning, bulk edit, Secure Wipe and the privacy scan for $2.99/month, $14.99/year or $24.99 once.</p>
+        <p>Free on iPhone and iPad: see everything and clean up to 5 photos a day. EXIF Pro unlocks unlimited cleaning, bulk edit, Secure Wipe and the privacy scan for $2.99 a month, $14.99 a year or $24.99 once.</p>
         <a class="btn btn-primary" href="https://apps.apple.com/app/id6774123180">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.68c-.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.55.02-2.97.9-3.77 2.28-1.61 2.79-.41 6.92 1.16 9.18.77 1.11 1.68 2.35 2.87 2.31 1.15-.05 1.59-.75 2.98-.75s1.79.75 3.01.72c1.24-.02 2.03-1.13 2.79-2.24.88-1.29 1.24-2.53 1.26-2.6-.03-.01-2.42-.93-2.46-3.69zM14.1 5.94c.63-.77 1.06-1.84.94-2.9-.91.04-2.01.61-2.67 1.37-.58.68-1.1 1.77-.96 2.81 1.02.08 2.05-.52 2.69-1.28z"/></svg>
           Download on the App Store
@@ -268,7 +254,7 @@
 
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Essential Dev Team · EXIF Pro</div>
+      <div>© <span id="year"></span> Essential Dev Team</div>
       <nav>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
@@ -282,29 +268,18 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile nav
     const toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', false); }));
 
-    // Reveal on scroll
+    // Reveal on scroll (IntersectionObserver, no scroll listeners). Hidden only when JS runs.
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Card hover glow follows the pointer
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-        card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-      });
-    });
-
   </script>
 </body>
 </html>
