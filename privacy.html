@@ -30,7 +30,7 @@
     <div class="container">
       <div class="kicker">Legal</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: October 13, 2026 · Applies to EXIF Pro for iOS and iPadOS by Essential Dev Team</p>
+      <p class="meta">Effective date: October 16, 2026 · Applies to EXIF Pro for iOS and iPadOS by Essential Dev Team</p>
 
       <div class="box">
         <p><b style="color:var(--text)">The short version.</b> Your photos never leave your device: all metadata reading, editing, stripping and scanning happens on your iPhone or iPad. There are no accounts, no advertising and no third-party SDKs. The app sends anonymous usage statistics (which screens are used, how many photos are cleaned, whether a purchase happened), tied to a random installation ID and never to your identity. You can switch them off at any time in Settings › Privacy.</p>
@@ -40,7 +40,7 @@
       <p>EXIF Pro is developed and published by Essential Dev Team ("we", "us"). You can reach us at <a href="mailto:essentialdevteam@gmail.com">essentialdevteam@gmail.com</a>.</p>
 
       <h2>2. What the app does with your photos</h2>
-      <p>EXIF Pro reads the metadata embedded in photos you choose (EXIF, TIFF, IPTC, GPS and related dictionaries), shows it to you, and can rewrite or remove it when you ask. This processing uses Apple's on-device frameworks (ImageIO, PhotoKit, Vision, MapKit) and never leaves your iPhone or iPad.</p>
+      <p>EXIF Pro reads the metadata embedded in photos you choose (EXIF, TIFF, IPTC, GPS and related dictionaries), shows it to you, and can rewrite or remove it when you ask. This processing uses Apple's on-device frameworks (ImageIO, PhotoKit, Vision, MapKit) and runs on your iPhone or iPad. Your photos are never sent to us. The one thing that leaves the device is a photo's GPS coordinates, which are looked up with Apple's location service to show a place name (see section 5).</p>
       <ul>
         <li>Photos are never uploaded to us or to any third party.</li>
         <li>Edited or cleaned copies are written only where you direct them: back to your Photos library, or to the app you pick in the iOS share sheet.</li>
@@ -53,7 +53,7 @@
       <ul>
         <li>App sessions (start and end) and the last screen shown.</li>
         <li>The app's own events, for example "a photo was cleaned" or "the Exposure tab was opened", as counts and categories only.</li>
-        <li>Paywall views and taps; that a purchase, restore, renewal or refund happened, and the plan type (monthly, yearly or lifetime).</li>
+        <li>Paywall views and taps; that a purchase, restore, renewal or refund happened, and the plan type (monthly, yearly or lifetime); whether a subscription is set to renew or was cancelled; and your answer to an optional one-tap cancellation survey.</li>
         <li>Requests to show the App Store review prompt.</li>
         <li>App version, iOS version, device model, language, region and time zone, and accessibility settings in use (such as VoiceOver, Reduce Motion, Bold Text or Larger Text).</li>
         <li>Crash and performance reports from Apple's MetricKit.</li>
@@ -72,10 +72,10 @@
       <p>You can change either permission at any time in iOS Settings › Privacy &amp; Security.</p>
 
       <h2>5. Network activity</h2>
-      <p>Besides the optional anonymous usage statistics described in section 3, EXIF Pro makes one other kind of network request: on launch it asks Apple's public App Store lookup service whether a newer version of the app is available, so we can suggest an update. This request contains the app's bundle identifier and is served by Apple; it does not include any personal data or photo content. If the request fails, the app simply continues offline. Maps shown in the location editor are provided by Apple Maps under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
+      <p>Besides the optional anonymous usage statistics described in section 3, EXIF Pro uses the network only to talk to Apple: (a) on launch it asks the App Store lookup service whether a newer version is available (the request contains only the app's bundle identifier); (b) when you view a photo that has GPS coordinates but no place name, the coordinates are sent to Apple's location service to look up the city and region shown in the headline &mdash; this goes to Apple, not to us; (c) addresses you type in the location editor are looked up with Apple Maps; (d) photos stored only in iCloud are downloaded from your own iCloud Photos library when you open them; (e) purchases are handled by the App Store. If a request fails, the app simply continues offline. Place names and maps are provided by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
       <h2>6. Data stored on your device</h2>
-      <p>Your preferences (for example the original-photo policy, saved metadata templates and default author or copyright text) are stored locally on your device using standard iOS storage and are included in your normal device backup. Deleting the app deletes this data.</p>
+      <p>Your preferences (for example the original-photo policy, saved metadata templates and default author or copyright text) are stored locally on your device using standard iOS storage and are included in your normal device backup. Deleting the app deletes this data, with one exception: the number of free clean copies already used is kept in this device's keychain (never synced or sent anywhere), so reinstalling does not reset it.</p>
 
       <h2>6b. Purchases</h2>
       <p>Optional EXIF Pro purchases are processed entirely by Apple through the App Store. The app checks your purchase status on your device using Apple's StoreKit. We never see your payment details, prices paid, receipts or transaction IDs. If usage statistics are on, the app records that a purchase, restore, renewal or refund happened and the plan type, tied only to the random installation ID (see section 3).</p>
@@ -87,7 +87,7 @@
       <p>EXIF Pro is not directed at children under 13 and does not knowingly collect any personal information from children.</p>
 
       <h2>9. Your rights</h2>
-      <p>Under the GDPR, CCPA and similar laws you have rights to access, correct and delete personal data. Usage statistics are tied to a random installation ID, not to your identity. To access or delete them, email us the Installation ID shown in Settings › Privacy. Everything else lives on your device and is removed when you delete the app. If you have a question about this, email us and we will help.</p>
+      <p>Under the GDPR, CCPA and similar laws you have rights to access, correct and delete personal data. Usage statistics are tied to a random installation ID, not to your identity. To access or delete them, email us the Installation ID shown in Settings › Privacy. Everything else lives on your device and is removed when you delete the app, except the free-copy counter described in section 6. If you have a question about this, email us and we will help.</p>
 
       <h2>10. Changes to this policy</h2>
       <p>If the app's behaviour ever changes in a way that affects your privacy, we will update this page and the effective date above, and describe the change in the App Store release notes.</p>
